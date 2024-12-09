@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   specialists: any[] = [];
   categories: any[] = []; // {{ edit_2 }}
 
-  activeRoute = 'home';isListView: boolean = true;  // Por defecto, vista lista
+  activeRoute = 'home';isListView: boolean = false;  // Por defecto, vista lista
 
   constructor(
     public device:DeviceService,

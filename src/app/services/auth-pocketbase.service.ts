@@ -108,7 +108,7 @@ export class AuthPocketbaseService {
           if (type === 'tutor') {
             return this.pb.collection('tutors').create(data);
           } else if (type === 'clinica') {
-            return this.pb.collection('members').create(data);
+            return this.pb.collection('workers').create(data);
           } else {
             throw new Error('Tipo de usuario no válido');
           }

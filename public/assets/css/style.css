@@ -16398,11 +16398,12 @@ label input {
     /* background: linear-gradient(135deg, #fe7601, #f78f46) !important; border-radius: 15px;  */
   
     background: linear-gradient(135deg, #FFC107, #FFD54F) !important;
-    border-radius: 15px;
+  
     
     
   }
     
+  
     .dz-banner .banner-swiper .swiper-wrapper .swiper-slide {
       opacity: 0 !important; }
       .dz-banner .banner-swiper .swiper-wrapper .swiper-slide.swiper-slide-active {

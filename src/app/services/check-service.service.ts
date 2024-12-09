@@ -24,7 +24,7 @@ export class CheckService {
   ) { }
   async checkService(service: Service,memberId:string): Promise<boolean> {
     try {
-      const memberRecord = await pb.collection('members').getOne(memberId); // Siempre se obtiene el registro del miembro
+      const memberRecord = await pb.collection('workers').getOne(memberId); // Siempre se obtiene el registro del miembro
       const services = Array.isArray(memberRecord['services']) ? memberRecord['services'] : [];
       const exists = services.some((s: Service) => s.id === service.id); // Verifica si el servicio está registrado
       if (exists) {

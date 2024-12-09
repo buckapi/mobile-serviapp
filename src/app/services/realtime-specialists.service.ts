@@ -24,8 +24,8 @@ export class RealtimeSpecialistsService implements OnDestroy {
       .collection('users')
       .authWithPassword('platform@conectavet.cl', 'HVPO86drd_D5Zon');
 
-    // Suscribirse a cambios en cualquier registro de la colección 'members'
-    this.pb.collection('members').subscribe('*', (e) => {
+    // Suscribirse a cambios en cualquier registro de la colección 'workers'
+    this.pb.collection('workers').subscribe('*', (e) => {
       this.handleRealtimeEvent(e);
     });
 
@@ -45,7 +45,7 @@ export class RealtimeSpecialistsService implements OnDestroy {
   private async updateSpecialistsList() {
     // Obtener la lista actualizada de especialistas
     const records = await this.pb
-      .collection('members')
+      .collection('workers')
       .getFullList(200 /* cantidad máxima de registros */, {
         sort: '-created', // Ordenar por fecha de creación
       });
@@ -54,6 +54,6 @@ export class RealtimeSpecialistsService implements OnDestroy {
 
   ngOnDestroy() {
     // Desuscribirse cuando el servicio se destruye
-    this.pb.collection('members').unsubscribe('*');
+    this.pb.collection('workers').unsubscribe('*');
   }
 }

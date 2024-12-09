@@ -4,14 +4,14 @@
         <div class="row dz-authentication-area" style="padding-top: 0px !important;">
             <div class="col-lg-4 dz-left" [hidden]="isMobile">
                 <div class="dz-media" [hidden]="isMobile">
-                    <img src="assets/images/authentication/pic2.png" alt="">
+                    <img src="https://truelysell.dreamstechnologies.com/html/template/assets/img/services/service-109.jpg" alt="">
                     <a href="javascript:void(0);" class="back-btn">
                         <i class="icon feather icon-chevron-left"></i>
                     </a>
                 </div>
                 <div class="section-head">
                     <h3 class="title">Crea tu cuenta</h3>
-                    <p class="capitalize-first">Conectavet, red de veterinarios a un click</p>
+                    <p class="capitalize-first"> Serviapp, red de servicios a un click</p>
                 </div>
             </div>
             <div class="col-lg-2 " [hidden]="isMobile">
@@ -29,21 +29,21 @@
 
                 <h1 [hidden]="global.option!=''" class="text-center mb-4">Tipo de cuenta</h1>
                 <h1 [hidden]="global.option!='tutor'" class="text-center mb-4">Datos de usuario</h1>
-                <h1 [hidden]="global.option!='clinica'" class="text-center mb-4">Datos de la clínica</h1>
+                <h1 [hidden]="global.option!='clinica'" class="text-center mb-4">Datos del empleador</h1>
 
                 <div class="row g-3 mb-3" [hidden]="global.option!=''">
                     <div class="col-6  ">
                         <div class="">
                             <div class="" style="padding: 0 0 50px 0 !important; margin: 0 !important;">
                                 <a  (click)="setOption('tutor')">
-                                    <img src="assets/images/tutorPets.png" style="max-width: 50%;" alt="image">
+                                    <img src="assets/images/obreros.gif" style="max-width: 50%;" alt="image">
                                 </a>
             
                                 <a (click)="setOption('tutor')"
-                                    class="btn fixed-btn btn-primary font-16 btn-sm w-50 gap-1" > <span style="font-weight: bold; font-size: 20px;">Tutor</span>
+                                    class="btn fixed-btn btn-primary font-16 btn-sm  gap-1" > <span style="font-weight: bold; font-size: 20px;">Empleado</span>
                                     </a>
                                 </div>
-                            <h5>Únite e inscribe a tu mascota</h5>
+                            <h5>Únete y consigue tu primer empleo</h5>
 
                             </div>
                     </div>
@@ -51,14 +51,14 @@
                         <div class="">
                             <div class="" style="padding: 0 0 50px 0 !important; margin: 0 !important;">
                                 <a (click)="setOption('clinica')">
-                                    <img src="assets/images/clinic.png"  style="max-width: 50%;" alt="image">
+                                    <img src="https://cdn-icons-gif.flaticon.com/15713/15713158.gif"  style="max-width: 50%;" alt="image">
                                 </a>
                                 
                                 <a (click)="setOption('clinica')"
-                                class="btn fixed-btn btn-primary font-16 btn-sm w-50 gap-1"><span style="font-weight: bold; font-size: 20px;">Clínica</span>
+                                class="btn fixed-btn btn-primary font-16 btn-sm  gap-1"><span style="font-weight: bold; font-size: 20px;">Empleador</span>
                             </a>
                         </div>
-                        <h5>Registra tu centro médico para ser parte de nuestra comunidad</h5>
+                        <h5>Registrate y ofrece empleo a profesionales</h5>
                     </div>
                 </div>
                 </div>
@@ -95,19 +95,19 @@
                 <div class="account-section" [hidden]="global.option!='clinica'">
                     <form (ngSubmit)="registerClinic()">
                         <div class="mb-3">
-                            <label class="form-label" for="clinicName">Nombre de la Clínica*</label>
+                            <label class="form-label" for="clinicName">Nombre del empleador*</label>
                             <input type="text" id="clinicName" class="form-control" [(ngModel)]="clinicName" name="clinicName" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="clinicEmail">Email de la Clínica*</label>
+                            <label class="form-label" for="clinicEmail">Email del empleador*</label>
                             <input type="email" id="clinicEmail" class="form-control" [(ngModel)]="clinicEmail" name="clinicEmail" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="clinicPhone">Teléfono de la Clínica*</label>
+                            <label class="form-label" for="clinicPhone">Teléfono del empleador*</label>
                             <input type="tel" id="clinicPhone" class="form-control" [(ngModel)]="clinicPhone" name="clinicPhone" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="clinicAddress">Dirección de la Clínica*</label>
+                            <label class="form-label" for="clinicAddress">Dirección del empleador*</label>
                             <input type="text" id="clinicAddress" class="form-control" [(ngModel)]="clinicAddress" name="clinicAddress" required>
                         </div>
                         <div class="mb-3">
@@ -125,7 +125,7 @@
                                     Política de Privacidad y las Tarifas</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-thin btn-lg w-100 btn-primary">Registrar Clínica</button>
+                        <button type="submit" class="btn btn-thin btn-lg w-100 btn-primary">Registrarme como empleador</button>
                     </form>
                 </div>
 

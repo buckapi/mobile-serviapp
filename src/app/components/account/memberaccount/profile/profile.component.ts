@@ -265,7 +265,7 @@ currentUser = {
   async updateFields(fieldName: string, value: string): Promise<void> {
     try {
       const memberId = this.fields.id;
-      await this.pb.collection('members').update(memberId, { [fieldName]: value });
+      await this.pb.collection('workers').update(memberId, { [fieldName]: value });
 
       if (fieldName === 'full_name') {
         const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
@@ -284,7 +284,7 @@ currentUser = {
   async fetchMemberData(): Promise<void> {
     try {
       const userId = this.auth.getUserId();
-      const memberRecord = await this.pb.collection('members').getFirstListItem<MemberRecord>(`userId="${userId}"`);
+      const memberRecord = await this.pb.collection('workers').getFirstListItem<MemberRecord>(`userId="${userId}"`);
       if (memberRecord) {
         if (!this.fields.rut) {
           this.canEditRut = true;
@@ -343,9 +343,9 @@ currentUser = {
             console.log('Imagen actualizada en users:', updatedUser);
           }
   
-          // Actualizar el registro de `members`
+          // Actualizar el registro de `workers`
           const tutorRecord = await this.pb
-            .collection('members')
+            .collection('workers')
             .getFirstListItem(`userId="${userId}"`);
   
           if (tutorRecord) {
@@ -354,8 +354,8 @@ currentUser = {
               images: [uploadedImageUrl],
             };
   
-            await this.pb.collection('members').update(tutorRecord.id, updatedTutor);
-            console.log('Ficha en members actualizada:', updatedTutor);
+            await this.pb.collection('workers').update(tutorRecord.id, updatedTutor);
+            console.log('Ficha en workers actualizada:', updatedTutor);
           }
   this.currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
           // Actualizar previsualización y localStorage

@@ -119,7 +119,7 @@ export class GlobalService {
           status: 'approved'
         };
 
-        const record = await pb.collection('members').update(clinica.id, data);
+        const record = await pb.collection('workers').update(clinica.id, data);
 
         console.log('Estado de la clínica actualizado a: approved', record);
         return record;
@@ -186,7 +186,7 @@ export class GlobalService {
     // Fetch member records using userId
     try {
       const pb = new PocketBase('https://db.conectavet.cl:8080');
-      const memberRecords = await pb.collection('members').getFullList(200, { filter: `userId = "${userId}"` });
+      const memberRecords = await pb.collection('workers').getFullList(200, { filter: `userId = "${userId}"` });
 
       if (memberRecords.length > 0) {
         const memberRecord = memberRecords[0]; // Assuming userId is unique
@@ -223,7 +223,7 @@ export class GlobalService {
       console.log("bsucando")
       const pb = new PocketBase('https://db.conectavet.cl:8080');
 
-      let memberRecord = await pb.collection('members').getOne(id);
+      let memberRecord = await pb.collection('workers').getOne(id);
 
       // Log or use the member record as needed
       console.log('Member la info:', memberRecord);
@@ -278,7 +278,7 @@ export class GlobalService {
           status: newStatus
         };
 
-        const record = await pb.collection('members').update(specialist.id, data);
+        const record = await pb.collection('workers').update(specialist.id, data);
 
         console.log(`Estado del especialista actualizado a: ${newStatus}`, record);
 

@@ -82,7 +82,7 @@ export class ActiveservicesComponent  implements OnInit{
 
     if (price) {
       try {
-        let memberRecord = await pb.collection('members').getOne(this.memberId);
+        let memberRecord = await pb.collection('workers').getOne(this.memberId);
         console.log('servc' + JSON.stringify(memberRecord['services']));
         this.newServices = memberRecord['services'];
         this.record = memberRecord as Member; 
@@ -104,7 +104,7 @@ export class ActiveservicesComponent  implements OnInit{
         enviar.services = this.newServices;
         console.log('info a enviar' + JSON.stringify(memberRecord));
         const updatedRecord = await pb
-          .collection('members')
+          .collection('workers')
           .update(this.memberId, enviar);
         Swal.fire(
           'Éxito',
@@ -128,7 +128,7 @@ export class ActiveservicesComponent  implements OnInit{
   async updatePrice(service: Service) {
     try {
       // Cargar el registro del miembro
-      const memberRecord = await pb.collection('members').getOne(this.memberId);
+      const memberRecord = await pb.collection('workers').getOne(this.memberId);
       console.log('Servicios del miembro:', JSON.stringify(memberRecord['services']));
       
       const memberServices: Service[] = memberRecord["services"] || []; // Asegúrate de que sea un array de Service
@@ -160,7 +160,7 @@ export class ActiveservicesComponent  implements OnInit{
   
           // Enviar la actualización al servidor
           try {
-            const updatedRecord = await pb.collection('members').update(this.memberId, {
+            const updatedRecord = await pb.collection('workers').update(this.memberId, {
               services: memberServices,
             });
   
@@ -257,7 +257,7 @@ export class ActiveservicesComponent  implements OnInit{
   
   async loadMemberRecord() {
     try {
-      this.memberRecord = await pb.collection('members').getOne(this.memberId);
+      this.memberRecord = await pb.collection('workers').getOne(this.memberId);
     } catch (error) {
       console.error('Error al cargar el registro del miembro:', error);
     }
@@ -269,7 +269,7 @@ export class ActiveservicesComponent  implements OnInit{
   
   async checkService(service: Service): Promise<boolean> {
     try {
-      const memberRecord = await pb.collection('members').getOne(this.memberId); // Siempre se obtiene el registro del miembro
+      const memberRecord = await pb.collection('workers').getOne(this.memberId); // Siempre se obtiene el registro del miembro
       const services = Array.isArray(memberRecord['services']) ? memberRecord['services'] : [];
       const exists = services.some((s: Service) => s.id === service.id); // Verifica si el servicio está registrado
   
