@@ -41,14 +41,14 @@
 
 .title {
     font-size: 65px;
-    color: #3ba5a8;
+    color: #453F85;;
     font-weight: bolder !important;
 }
 
 .sub {
     font-size: 45px;
     font-weight: bolder !important;
-    color: #3ba5a8;
+    color: #453F85;;
 }
 
 /* Mostrar solo en pantallas de escritorio */
@@ -60,7 +60,7 @@
 /* Centrar el texto dentro del input */
 .form-control {
     text-align: center; /* Esto centra el texto y el placeholder */
-    background-color: #3ba5a8;
+    background-color: #453F85;;
 }
 
 /* Estilos para el placeholder */
@@ -70,6 +70,6 @@
 }
 .btn-login{
     background-color: #cfe9e9;
-    color: #3ba5a8;
+    color: #453F85;;
     font-size: 20px !important;
 }

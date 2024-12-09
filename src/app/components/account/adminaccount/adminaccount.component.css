@@ -1,15 +1,15 @@
 .hover-effect:hover {
-    color: #3ba5a8 !important;
+    color: #453F85; !important;
     background-color: #f0f0f0; /* Cambia este color según tus necesidades */
 }
 .list-icon i:hover {
-    color: #3ba5a8 !important;
+    color: #453F85; !important;
 }
 .dz-inner .title:hover {
-    color: #3ba5a8 !important;
+    color: #453F85; !important;
 }
 .item-link:hover{
-    color: #3ba5a8 !important;
+    color: #453F85; !important;
 
 }
 .scrollable-area {

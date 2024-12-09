@@ -1,6 +1,6 @@
 .avatar-profesional {
   border-radius: 50%; /* Para que la imagen sea circular */
-  border: 2px solid #3ba5a8;
+  border: 2px solid #453F85;;
   margin: 10px;
   object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor sin distorsión */
 }
@@ -58,21 +58,21 @@
 }
 .service-card-hover {
   color: white !important;
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   transform: translateY(-2px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-card-hover .service-price {
   color: white !important;
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   transform: translateY(-2px);
 }
 
 
 .service-card:hover {
   color: white !important;
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   transform: translateY(-2px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
@@ -89,7 +89,7 @@
   width: 100px;
 }
 .service-price {
-  color: #3ba5a8;
+  color: #453F85;;
   font-weight: 900;
   padding-left: 10px;
   font-size: 16px;
@@ -106,13 +106,13 @@
 
 .day.active {
   opacity: 1;
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   color: white;
 }
 .btn.btn-active{
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   opacity: 1;
-  border: 1px solid #3ba5a8 !important;
+  border: 1px solid #453F85; !important;
   color: white; 
 }
 
@@ -133,14 +133,14 @@
 
 /* Asegurarse que el día seleccionado mantenga su estilo */
 .mat-calendar-body-selected {
-  background-color: #3ba5a8 !important;
+  background-color: #453F85; !important;
   border-radius: 50%;
   color: white !important;
 }
 ::ng-deep .mat-calendar-body-cell.highlight-enabled-day {
   border: 1px solid rgba(59, 165, 168, 0.2) !important;
-  /* background-color: rgba(59, 165, 168, 0.2) !important; Version clara de #3ba5a8 */
-  background-color: rgba(59, 165, 168, 0.2) !important; /* Version clara de #3ba5a8 */
+  /* background-color: rgba(59, 165, 168, 0.2) !important; Version clara de #453F85; */
+  background-color: rgba(59, 165, 168, 0.2) !important; /* Version clara de #453F85; */
   color: #000 !important; /* Texto negro */
   border-radius: 50%; /* Opcional: hace que el fondo sea circular */
 }

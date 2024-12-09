@@ -67,7 +67,7 @@
   }
   
   .circle.active {
-    background: #3ba5a8;
+    background: #453F85;;
     color: white;
   }
   
@@ -83,7 +83,7 @@
   
   .indicator {
     height: 100%;
-    background: #3ba5a8;
+    background: #453F85;;
     width: 0;
     transition: width 0.3s;
   }

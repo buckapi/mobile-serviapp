@@ -106,7 +106,7 @@ filteredPets: any[] = [];
         text: 'Para agregar más mascotas, necesitas suscribirte a un plan premium',
         icon: 'warning',
         confirmButtonText: 'Entendido',
-        confirmButtonColor: '#3ba5a8'
+        confirmButtonColor: '#453F85;'
       });
     } else {
       this.global.setFormOption('category');

@@ -34,7 +34,7 @@
 .avt {
     border-radius: 50%;
     cursor: pointer;
-    border: 5px solid #3ba5a8;
+    border: 5px solid #453F85;;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Shadow effect */
     transition: box-shadow 0.3s ease, transform 0.3s ease;
