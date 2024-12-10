@@ -6,7 +6,7 @@
     </div>
     <div class="swiper dz-category-swiper3 mb-3">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" *ngFor="let item of config.getServicesByCategory(config.categorySelected)">
+            <div class="swiper-slide" *ngFor="let item of config.getServicesByCategory(config.categorySelected)"    >
                 <a class="category-tag tag-lg" style="cursor: pointer;" (click)="showServiceAlert(item.name)"
                     [ngClass]="{'active': item.name === selectedService}">
                     {{ item.name }}

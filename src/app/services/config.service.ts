@@ -12,6 +12,7 @@ export class ConfigService {
     apiEndpoint: 'https://api.redveterinarios.com/v1/',
     defaultLanguage: 'es',
     itemsPerPage: 10,
+    images:[],
     theme: 'light',
     reels: {
       uno: 'https://unsplash.it/g/1500/2200?image=838',
@@ -38,9 +39,9 @@ export class ConfigService {
    
 services: {
   // Consultas Generales
-  medicina_preventiva: { name: 'Medicina Preventiva', categoryKey: 'salud_general' },
-  vacunacion: { name: 'Vacunación', categoryKey: 'salud_general' },
-  desparasitacion: { name: 'Desparasitación', categoryKey: 'salud_general' },
+  medicina_preventiva: { name: 'Plomería', categoryKey: 'salud_general' },
+  vacunacion: { name: 'Electricidad ', categoryKey: 'salud_general' },
+  desparasitacion: { name: 'Mecánica', categoryKey: 'salud_general' },
 
   // Urgencias Veterinarias
   atencion_emergencia: { name: 'Emergencia', categoryKey: 'urgencias' },
