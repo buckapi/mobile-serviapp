@@ -6,7 +6,7 @@
                 <span class="text-primary">
                     {{global.categorySelected.name}}
                 </span>
-                 () clinicas
+                 () resultados
             </h4>
             <h4 class="title max-w200" [hidden]="global.categoryFiltersAplcated">Top servicios</h4>
         </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="swiper dz-category-swiper3 mb-3">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" *ngFor="let item of (realtimeCategories.categories$ | async)" [hidden]="!item.carousel">
+            <div class="swiper-slide" *ngFor="let item of (realtimeCategories.categories$ | async)" [hidden]="!item.carousel || item.images.length === 0">
                 <a  
                    class="category-tag tag-lg"
                    style="cursor: pointer;"
